@@ -4,6 +4,14 @@
     <string name="signup">Signup</string>
     <string name="hint_email">Email address</string>
     <string name="hint_password">Password</string>
-    <string name="app_name">EMEX</string>
-    <string name="app_name">EMEX</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="donthaveanaccount">Don\'t have an account? <b>Signup</b></string>
+    <string name="hint_fname">First name</string>
+    <string name="hint_lname">Last name</string>
+    <string name="hint_contact_no">Contact Number</string>
+    <string name="hint_contact_name">Contact Name</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_toc">"  "I accept <font color="#51a7f9"><b><u>Terms of Service</u></b></font> and <font color="#51a7f9"><b><u>Privacy Policy</u></b></font> </string>
+    <string name="text">Please enter your mobile number to reset your password</string>
+    <string name="continu">Continue7</string>
 </resources>

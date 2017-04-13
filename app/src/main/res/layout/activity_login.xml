@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_2">
-    
+
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,20 +36,18 @@
         android:drawableStart="@drawable/icon_password"/>
 
     <Button
-        android:textAllCaps="false"
         android:id="@+id/btn_Login"
         style="@style/ButtonLayout"
         android:text="@string/login"
-        android:textColor="#FFFFFF"
-        android:background="#51a7f9"
+        android:textColor="@color/colorText"
+        android:background="@color/colorPrimary"
         android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/tv_ForgotPassword"
         style="@style/ButtonLayout"
-        android:text="Forgot Password?"
-        android:textColor="#51a7f9"
-        android:layout_marginBottom="20dp"
+        android:text="@string/forgotpassword"
+        android:textColor="@color/colorPrimary"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:clickable="true"/>
@@ -56,11 +55,10 @@
     <TextView
         android:id="@+id/tv_Signup"
         style="@style/ButtonLayout"
-        android:text="Don't have an account? Signup"
-        android:textColor="#51a7f9"
-        android:layout_marginBottom="20dp"
+        android:text="@string/donthaveanaccount"
+        android:textColor="@color/colorPrimary"
         android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:clickable="true"/>
+        android:layout_marginTop="90dp"
+        android:clickable="true" />
 
 </LinearLayout>
