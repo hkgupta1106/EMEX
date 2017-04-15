@@ -2,7 +2,7 @@
     <string name="app_name">EMEX</string>
     <string name="login">Login</string>
     <string name="signup">Signup</string>
-    <string name="hint_email">Email address</string>
+    <string name="hint_email">Email pickUpAddress</string>
     <string name="hint_password">Password</string>
     <string name="forgotpassword">Forgot Password?</string>
     <string name="donthaveanaccount">Don\'t have an account? <b>Signup</b></string>
@@ -14,4 +14,7 @@
     <string name="hint_toc">"  "I accept <font color="#51a7f9"><b><u>Terms of Service</u></b></font> and <font color="#51a7f9"><b><u>Privacy Policy</u></b></font> </string>
     <string name="text">Please enter your mobile number to reset your password</string>
     <string name="continu">Continue7</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

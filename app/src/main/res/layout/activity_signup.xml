@@ -7,115 +7,114 @@
     <include layout="@layout/custom_toolbar" />
 
 
-
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="22dp"
         android:layout_gravity="center"
+        android:layout_marginTop="22dp"
         android:src="@drawable/user_placeholder" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginStart="23dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_fname"
             android:layout_weight="1"
+            android:drawablePadding="10dp"
             android:drawableStart="@drawable/icon_name"
-            android:drawablePadding="10dp"/>
+            android:hint="@string/hint_fname" />
 
-<TextView
-    android:layout_width="1dp"
-    android:layout_height="25dp"
-    android:background="@color/colorBackground"/>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:background="@color/colorBackground" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_lname"
             android:layout_weight="1"
+            android:drawablePadding="10dp"
             android:drawableStart="@drawable/icon_name"
-            android:drawablePadding="10dp"/>
+            android:hint="@string/hint_lname" />
 
     </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_contact_no"
-        android:drawableStart="@drawable/icon_contact"
-        android:drawablePadding="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"/>
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/icon_contact"
+        android:hint="@string/hint_contact_no" />
 
     <EditText
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_contact_name"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="10dp"
         android:drawableStart="@drawable/icon_name"
-        android:drawablePadding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:hint="@string/hint_contact_name" />
 
     <EditText
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_email"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="10dp"
         android:drawableStart="@drawable/icon_email"
-        android:drawablePadding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:hint="@string/hint_email" />
 
     <EditText
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_password"
-        android:drawableStart="@drawable/icon_password"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:drawableStart="@drawable/icon_password"
+        android:hint="@string/hint_password" />
 
     <EditText
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_confirm_password"
-        android:drawableStart="@drawable/icon_password"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:drawableStart="@drawable/icon_password"
+        android:hint="@string/hint_confirm_password" />
 
     <CheckBox
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_toc"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
         android:button="@drawable/custom_checkbox"
-        android:layout_marginTop="10dp" />
+        android:text="@string/hint_toc" />
 
 
     <Button
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
         android:id="@+id/btn_Signup"
         style="@style/ButtonLayout"
-        android:text="@string/signup"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="16dp"
-        android:textColor="@color/colorText"
         android:background="@color/colorPrimary"
-        android:textSize="16dp"/>
+        android:text="@string/signup"
+        android:textColor="@color/colorText"
+        android:textSize="16dp" />
 
 </LinearLayout>

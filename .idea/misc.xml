@@ -37,9 +37,6 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/custom_toolbar.xml" />
-  </component>
   <component name="ProjectResources">
     <xml-schema-version>XMLSchema_1_1</xml-schema-version>
   </component>

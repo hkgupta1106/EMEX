@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/custom_toolbar"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="276dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorText"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="Hitesh Gupta"
+            android:textColor="@color/colorBackground"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="Edit Profile"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_networkview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icon_networks"
+                android:text="Networks View"
+                android:textColor="@color/colorBackground"
+                android:textSize="16sp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_payment_pressed"
+            android:text="Payment"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_jobhistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_job_normal"
+            android:text="Job History"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_Emergencycall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_emergency_normal"
+            android:text="Emergency Contacts"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_help_normal"
+            android:text="Help"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_logout_normal"
+            android:text="Logout"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Support via Call/Email"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/icon_support_call_normal" />
+            >
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="#dcdcdc" />
+
+            <ImageView
+                android:id="@+id/iv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/icon_support_msg_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
