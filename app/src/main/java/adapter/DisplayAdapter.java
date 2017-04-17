@@ -13,7 +13,9 @@ import java.util.ArrayList;
 
 import model.JobHistoryModel;
 
-
+/**
+ * display adapter
+ */
 public class DisplayAdapter extends android.support.v7.widget.RecyclerView.Adapter<DisplayAdapter.ViewHolder> {
 
 
@@ -92,7 +94,6 @@ public class DisplayAdapter extends android.support.v7.widget.RecyclerView.Adapt
 
             lllayout = (LinearLayout) itemView.findViewById(R.id.lllayout);
             if (mode == 1) {
-                tvDestinationAddress.setVisibility(View.INVISIBLE);
                 lllayout.setVisibility(View.GONE);
 
             }

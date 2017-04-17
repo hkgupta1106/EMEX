@@ -2,7 +2,7 @@
     <string name="app_name">EMEX</string>
     <string name="login">Login</string>
     <string name="signup">Signup</string>
-    <string name="hint_email">Email pickUpAddress</string>
+    <string name="hint_email">Email Address</string>
     <string name="hint_password">Password</string>
     <string name="forgotpassword">Forgot Password?</string>
     <string name="donthaveanaccount">Don\'t have an account? <b>Signup</b></string>

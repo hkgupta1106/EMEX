@@ -4,7 +4,8 @@ import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -27,7 +28,7 @@ import android.widget.TextView;
 public class MainJobFragment extends Fragment {
 
     private ImageView imageView;
-
+    private Button btnjobhistory, btnmissedjobs;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup viewGroup, final Bundle savedInstanceState) {
@@ -48,28 +49,18 @@ public class MainJobFragment extends Fragment {
             }
         });
 
-        return view;
-    }
+        final ViewPager pager = (ViewPager) view.findViewById(R.id.vp_pager);
+        pager.setAdapter(new MyPagerAdapter(getChildFragmentManager()));
 
-    /**
-     * @param savedInstanceState asd
-     */
-    public void onActivityCreated(final Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        final Button btnjobhistory = (Button) getActivity().findViewById(R.id.btn_job_history);
-        final Button btnmissedjobs = (Button) getActivity().findViewById(R.id.btn_missed_jobs);
+        btnjobhistory = (Button) view.findViewById(R.id.btn_job_history);
+        btnmissedjobs = (Button) view.findViewById(R.id.btn_missed_jobs);
         btnjobhistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
 
                 btnjobhistory.setBackgroundResource(R.color.colorPrimary);
                 btnmissedjobs.setBackgroundResource(R.color.colorPrimaryDark);
-                JobFragment jobFragment = new JobFragment();
-                FragmentManager fmjob = getChildFragmentManager();
-                FragmentTransaction ftjob = fmjob.beginTransaction();
-                ftjob.replace(R.id.fl_display, jobFragment);
-                ftjob.commit();
+                pager.setCurrentItem(0);
             }
         });
 
@@ -79,12 +70,76 @@ public class MainJobFragment extends Fragment {
 
                 btnjobhistory.setBackgroundResource(R.color.colorPrimaryDark);
                 btnmissedjobs.setBackgroundResource(R.color.colorPrimary);
-                MissedRideFragment missedRideFragment = new MissedRideFragment();
-                FragmentManager fmjob = getChildFragmentManager();
-                FragmentTransaction ftjob = fmjob.beginTransaction();
-                ftjob.replace(R.id.fl_display, missedRideFragment);
-                ftjob.commit();
+                    pager.setCurrentItem(1);
             }
         });
+
+        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(final int position) {
+                switch (position) {
+                    case 0:
+                        btnjobhistory.setBackgroundResource(R.color.colorPrimary);
+                        btnmissedjobs.setBackgroundResource(R.color.colorPrimaryDark);
+
+                            break;
+                    case 1:
+                        btnjobhistory.setBackgroundResource(R.color.colorPrimaryDark);
+                        btnmissedjobs.setBackgroundResource(R.color.colorPrimary);
+
+                            break;
+                    default:
+                        btnjobhistory.setBackgroundResource(R.color.colorPrimary);
+                        btnmissedjobs.setBackgroundResource(R.color.colorPrimaryDark);
+                }
+            }
+            @Override
+            public void onPageScrollStateChanged(final int state) {
+
+            }
+        });
+
+        return view;
+    }
+
+    /**
+     * view pager adapter
+     */
+    class MyPagerAdapter extends FragmentPagerAdapter {
+
+        /**
+         *
+         * @param fm fragment manager object
+         */
+        public MyPagerAdapter(final FragmentManager fm) {
+            super(fm);
+        }
+
+        /**
+         * method to get fragment position
+         * @param pos position
+         * @return position
+         */
+        @Override
+        public Fragment getItem(final int pos) {
+            switch (pos) {
+                case 0:
+                    return new JobFragment();
+                case 1:
+                    return new MissedRideFragment();
+                default:
+                    return new JobFragment();
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
+        }
     }
 }
