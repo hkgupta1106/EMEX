@@ -1,6 +1,6 @@
 package com.example.himanshu.emex;
 
-
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import fragment.MainJobFragment;
+import fragment.MapFragment;
 
 /**
  * home screen activity containing drawer
@@ -20,7 +21,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     private ImageView imageView, imageViewCall, imageViewMail;
     private DrawerLayout drawerLayout;
-    private TextView tvJob;
+    private TextView tvJob, tvHome, tvNetwork, tvLogout;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -57,6 +58,9 @@ public class HomeScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
 
+                tvHome = (TextView) findViewById(R.id.tv_home);
+                tvHome.setVisibility(View.GONE);
+
                 drawerLayout.closeDrawer(Gravity.START);
 
                 MainJobFragment mainjobfragment = new MainJobFragment();
@@ -68,6 +72,28 @@ public class HomeScreenActivity extends AppCompatActivity {
                 ftjob.commit();
 
 
+            }
+        });
+
+        tvNetwork = (TextView) findViewById(R.id.tv_networkview);
+        tvNetwork.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                drawerLayout.closeDrawer(Gravity.START);
+                FragmentManager fm = getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frame_Layout, new MapFragment());
+                ft.commit();
+            }
+        });
+
+        tvLogout = (TextView) findViewById(R.id.tv_logout);
+        tvLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                Intent intent = new Intent(HomeScreenActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
