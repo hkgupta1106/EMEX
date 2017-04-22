@@ -27,6 +27,7 @@ import android.widget.TextView;
  */
 public class MainJobFragment extends Fragment {
 
+    private static final String JOB_HISTORY = "jobhistory", MISSED_RIDE = "missedride";
     private ImageView imageView;
     private Button btnjobhistory, btnmissedjobs;
 
@@ -70,7 +71,7 @@ public class MainJobFragment extends Fragment {
 
                 btnjobhistory.setBackgroundResource(R.color.colorPrimaryDark);
                 btnmissedjobs.setBackgroundResource(R.color.colorPrimary);
-                    pager.setCurrentItem(1);
+                pager.setCurrentItem(1);
             }
         });
 
@@ -87,17 +88,18 @@ public class MainJobFragment extends Fragment {
                         btnjobhistory.setBackgroundResource(R.color.colorPrimary);
                         btnmissedjobs.setBackgroundResource(R.color.colorPrimaryDark);
 
-                            break;
+                        break;
                     case 1:
                         btnjobhistory.setBackgroundResource(R.color.colorPrimaryDark);
                         btnmissedjobs.setBackgroundResource(R.color.colorPrimary);
 
-                            break;
+                        break;
                     default:
                         btnjobhistory.setBackgroundResource(R.color.colorPrimary);
                         btnmissedjobs.setBackgroundResource(R.color.colorPrimaryDark);
                 }
             }
+
             @Override
             public void onPageScrollStateChanged(final int state) {
 
@@ -113,7 +115,6 @@ public class MainJobFragment extends Fragment {
     class MyPagerAdapter extends FragmentPagerAdapter {
 
         /**
-         *
          * @param fm fragment manager object
          */
         public MyPagerAdapter(final FragmentManager fm) {
@@ -122,6 +123,7 @@ public class MainJobFragment extends Fragment {
 
         /**
          * method to get fragment position
+         *
          * @param pos position
          * @return position
          */
@@ -129,11 +131,11 @@ public class MainJobFragment extends Fragment {
         public Fragment getItem(final int pos) {
             switch (pos) {
                 case 0:
-                    return new JobFragment();
+                    return new JobFragment(JOB_HISTORY);
                 case 1:
-                    return new MissedRideFragment();
+                    return new JobFragment(MISSED_RIDE);
                 default:
-                    return new JobFragment();
+                    return new JobFragment(JOB_HISTORY);
             }
         }
 
